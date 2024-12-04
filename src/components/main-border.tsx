@@ -44,7 +44,7 @@ export const MainBorder: FC<MainBorderProps> = ({ children }) => {
       <div
         ref={scope}
         className={twMerge(
-          "rounded-3xl shadow-[0_0_0_4px_black] w-[500px] h-[160px] overflow-hidden",
+          "relative rounded-3xl shadow-[0_0_0_4px_black] w-[500px] h-[160px] overflow-hidden",
         )}
       >
         {children}

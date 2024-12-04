@@ -1,3 +1,4 @@
+import { Button } from "@/components/button";
 import { $UI } from "@/store";
 import { AnimatePresence, type HTMLMotionProps, motion } from "framer-motion";
 import React, { useEffect, useState, type FC } from "react";
@@ -45,7 +46,7 @@ export const Prologue: FC<PrologueProps> = (props) => {
 
   return (
     <motion.div
-      className="w-full h-full flex items-center justify-center"
+      className="relative w-full h-full flex items-center justify-center"
       {...rest}
     >
       <AnimatePresence mode="wait">
@@ -59,6 +60,18 @@ export const Prologue: FC<PrologueProps> = (props) => {
           </motion.div>
         )}
       </AnimatePresence>
+      <div className="absolute top-2 right-2">
+        <Button
+          className="text-2xl"
+          onClick={() => {
+            $UI.update("", (draft) => {
+              draft.status = "high-school";
+            });
+          }}
+        >
+          跳过
+        </Button>
+      </div>
     </motion.div>
   );
 };

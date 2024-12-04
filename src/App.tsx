@@ -10,9 +10,12 @@ import { Coding } from "./pages/coding";
 import { GroupStart } from "./pages/group-start";
 import { GroupEnd } from "./pages/group-end";
 import { BachelorPaper } from "./pages/bachelor-paper";
+import { FDUEND } from "./ends/fdu-end";
+import { BachelorGraduation } from "./pages/bachelor-graduation";
 
 const App: FC = () => {
   const status = $UI.use((state) => state.status);
+  const AIDepend = $UI.use((state) => state.AIDepend);
 
   return (
     <MainBorder>
@@ -35,6 +38,12 @@ const App: FC = () => {
         {status === "bachelor-paper" && (
           <BachelorPaper key="bachelor-paper" exit={{ opacity: 0 }} />
         )}
+        {status === "bachelor-graduation" && AIDepend < 60 && (
+          <BachelorGraduation key="bachelor-graduation" exit={{ opacity: 0 }} />
+        )}
+
+        {/* ends */}
+        {status === "bachelor-graduation" && AIDepend >= 60 && <FDUEND />}
       </AnimatePresence>
     </MainBorder>
   );

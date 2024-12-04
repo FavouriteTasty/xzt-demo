@@ -49,6 +49,10 @@ export const model = <S, N extends string = string>(
     },
 
     subscribe: $model.subscribe,
+
+    init() {
+      $model.setState(initial, false, "inner init");
+    },
   };
 
   return handler;

@@ -23,4 +23,26 @@ export const codingConfig: IFrame[] = [
       },
     ],
   },
+  {
+    titles: ["课程作业来了！", "面对一门编程课的作业你的选择是？"],
+    choices: [
+      {
+        content: "ChatGPT、通义千问、Kimi、文心一言全部启动！",
+        onClick: {
+          learning: 10,
+          AISkill: 10,
+          AIDepend: 10,
+          status: "group-start",
+        },
+      },
+      {
+        content: "祖宗之法不可变！百度启动！",
+        onClick: {
+          learning: 15,
+          AISkill: 5,
+          status: "group-start",
+        },
+      },
+    ],
+  },
 ];

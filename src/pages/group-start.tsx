@@ -12,7 +12,7 @@ export const GroupStart: FC<GroupStartProps> = (props) => {
 
   return (
     <motion.div className="h-full w-full" {...rest}>
-      <Display imageSrc="/group-start.png">
+      <Display imageSrc="/images/group-start.png">
         <div className="flex items-center justify-center w-full h-full">
           {!next && (
             <div>
@@ -24,6 +24,7 @@ export const GroupStart: FC<GroupStartProps> = (props) => {
                     $UI.update("totally ai", (draft) => {
                       draft.AISkill = draft.AISkill + 20;
                       draft.learning = draft.learning + 5;
+                      draft.AIDepend += 20;
                     });
                     setNext(true);
                   }}
@@ -35,6 +36,7 @@ export const GroupStart: FC<GroupStartProps> = (props) => {
                     $UI.update("totally ai", (draft) => {
                       draft.AISkill = draft.AISkill + 15;
                       draft.learning = draft.learning + 10;
+                      draft.AIDepend += 10;
                     });
                     setNext(true);
                   }}
@@ -74,11 +76,21 @@ export const GroupStart: FC<GroupStartProps> = (props) => {
                   onClick={() => {
                     $UI.update("totally ai", (draft) => {
                       draft.AISkill = draft.AISkill + 15;
+                      draft.AIDepend += 20;
                       draft.status = "group-end";
                     });
                   }}
                 >
                   我的 AI 比他们的都强！全都交给我的AI
+                </Button>
+                <Button
+                  onClick={() => {
+                    $UI.update("totally ai", (draft) => {
+                      draft.status = "group-end";
+                    });
+                  }}
+                >
+                  事不关己高高挂起
                 </Button>
               </div>
             </div>

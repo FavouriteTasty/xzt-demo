@@ -31,6 +31,11 @@ export type Update<S> = (
 ) => void;
 
 /**
+ * 初始化
+ */
+export type Init = () => void;
+
+/**
  * 监听器
  */
 export type Listener<S> = (newState: S, oldState: S) => void;
@@ -73,4 +78,9 @@ export interface Handler<S> {
    * @return 取消监听函数
    */
   subscribe: Subscribe<S>;
+
+  /**
+   * 初始化
+   */
+  init: Init;
 }

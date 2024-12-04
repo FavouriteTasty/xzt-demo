@@ -10,7 +10,7 @@ export const HighSchool: FC<HighSchoolProps> = (props) => {
   const { ...rest } = props;
   return (
     <motion.div className="h-full w-full" {...rest}>
-      <Display imageSrc="/high-school.png">
+      <Display imageSrc="/images/high-school.png">
         <div className="flex flex-col items-center justify-center w-full h-full gap-8">
           <div className="text-5xl">选择你的专业</div>
           <div className="flex flex-col items-center justify-center text-4xl gap-4">

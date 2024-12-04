@@ -10,7 +10,7 @@ export const GroupEnd: FC<GroupEndProps> = (props) => {
   const { ...rest } = props;
   return (
     <motion.div className="h-full w-full" {...rest}>
-      <Display imageSrc="/group-end.png">
+      <Display imageSrc="/images/group-end.png">
         <div className="flex flex-col items-center justify-center w-full h-full">
           <div className="px-1">
             <div className="text-2xl">你修改了低水准的 AI 稿子。</div>

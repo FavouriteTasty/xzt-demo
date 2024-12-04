@@ -5,6 +5,7 @@ export interface UIModel {
   learning: number;
   luck: number;
   AISkill: number;
+  AIDepend: number;
   major: "cs" | "law" | "medical" | undefined;
 
   status:
@@ -15,7 +16,8 @@ export interface UIModel {
     | "coding"
     | "group-start"
     | "group-end"
-    | "bachelor-paper";
+    | "bachelor-paper"
+    | "bachelor-graduation";
   animating: boolean;
 }
 
@@ -24,7 +26,8 @@ export const $UI = model<UIModel>("UI", {
   learning: 0,
   luck: 0,
   AISkill: 0,
+  AIDepend: 0,
   major: undefined,
-  status: "coding",
+  status: "home",
   animating: false,
 });

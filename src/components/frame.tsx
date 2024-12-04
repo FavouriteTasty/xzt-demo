@@ -26,7 +26,11 @@ function makeFrame(
   setStep: React.Dispatch<React.SetStateAction<number>>,
 ): JSX.Element {
   return (
-    <motion.div key={genKey(frameIndex.toString())} exit={{ opacity: 0 }}>
+    <motion.div
+      key={genKey(frameIndex.toString())}
+      exit={{ opacity: 0 }}
+      className="px-2"
+    >
       {frame.titles.map((title) => (
         <div className="text-2xl" key={genKey(title)}>
           {title}

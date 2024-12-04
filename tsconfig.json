@@ -27,7 +27,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
   },
-  "include": ["src", ".eslintrc.cjs", "vite.config.ts"],
+  "include": ["src", ".eslintrc.cjs"],
   "exclude": ["node_modules", "dist", "**/*.spec.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
