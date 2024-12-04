@@ -49,17 +49,14 @@ export const Prologue: FC<PrologueProps> = (props) => {
       {...rest}
     >
       <AnimatePresence mode="wait">
-        {text.map(
-          (item, index) =>
-            step === index && (
-              <motion.div
-                className="text-4xl"
-                key={`prologue-${index}`}
-                exit={{ opacity: 0 }}
-              >
-                {item}
-              </motion.div>
-            ),
+        {step < text.length && (
+          <motion.div
+            className="text-4xl"
+            key={`prologue-${step}`}
+            exit={{ opacity: 0 }}
+          >
+            {text[step]}
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.div>
