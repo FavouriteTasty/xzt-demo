@@ -7,7 +7,15 @@ export interface UIModel {
   AISkill: number;
   major: "cs" | "law" | "medical" | undefined;
 
-  status: "home" | "config" | "prologue" | "high-school" | "coding";
+  status:
+    | "home"
+    | "config"
+    | "prologue"
+    | "high-school"
+    | "coding"
+    | "group-start"
+    | "group-end"
+    | "bachelor-paper";
   animating: boolean;
 }
 

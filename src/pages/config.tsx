@@ -9,7 +9,7 @@ interface ConfigProps extends HTMLMotionProps<"div"> {}
 export const Config: FC<ConfigProps> = (props) => {
   const { ...rest } = props;
   return (
-    <motion.div className="relative h-full w-full" {...rest}>
+    <motion.div className="relative h-full w-full p-3" {...rest}>
       <StatusBar className="pb-2" />
       <div className="flex gap-2">
         <Button>金钥匙</Button>

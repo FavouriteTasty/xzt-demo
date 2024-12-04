@@ -10,7 +10,10 @@ interface ProgressBarProps {
 
 export const ProgressBar: FC<ProgressBarProps> = (props) => {
   const { className, min, max, current } = props;
-  const value = ((current - min) / (max - min)) * 100;
+  const value =
+    ((current - min) / (max - min)) * 100 > 100
+      ? 100
+      : ((current - min) / (max - min)) * 100;
   return (
     <div
       className={twMerge(

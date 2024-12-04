@@ -11,7 +11,7 @@ export const MainBorder: FC<MainBorderProps> = ({ children }) => {
   const status = $UI.use((state) => state.status);
   const [scope, animate] = useAnimate();
 
-  const changeByStatue = async (): Promise<void> => {
+  const changeByStatus = async (): Promise<void> => {
     if (status === "config") {
       await animate(
         scope.current,
@@ -36,7 +36,7 @@ export const MainBorder: FC<MainBorderProps> = ({ children }) => {
   };
 
   useEffect(() => {
-    void changeByStatue();
+    void changeByStatus();
   }, [status]);
 
   return (
