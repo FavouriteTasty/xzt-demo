@@ -1,29 +1,22 @@
 import { model } from "@/packages/model";
 
 export interface UIModel {
-  code: string;
-  date: string;
-  customize: "news" | "macd";
+  family: number;
+  learning: number;
+  luck: number;
+  AISkill: number;
+  major: "cs" | "law" | "medical" | undefined;
+
+  status: "home" | "config" | "prologue" | "high-school" | "coding";
+  animating: boolean;
 }
 
 export const $UI = model<UIModel>("UI", {
-  code: "000300",
-  date: "unknown",
-  customize: "news",
-});
-
-export interface SearchModel {
-  text: string;
-}
-
-export const $Search = model<SearchModel>("SEARCH", {
-  text: "",
-});
-
-export interface UserModel {
-  isLogin: boolean;
-}
-
-export const $User = model<UserModel>("USER", {
-  isLogin: !(localStorage.getItem("isLogin") == null),
+  family: 0,
+  learning: 0,
+  luck: 0,
+  AISkill: 0,
+  major: undefined,
+  status: "coding",
+  animating: false,
 });

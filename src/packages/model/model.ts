@@ -26,8 +26,8 @@ export const model = <S, N extends string = string>(
       ),
       {
         name,
-        storage: createJSONStorage(() => localStorage),
-        // skipHydration: true,
+        // storage: createJSONStorage(() => localStorage),
+        skipHydration: true,
       },
     ),
   );

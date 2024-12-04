@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./assets/fonts/font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     margin: 0;
     scrollbar-width: none;
+    font-family: 'MyCustomFont', sans-serif;
 }
