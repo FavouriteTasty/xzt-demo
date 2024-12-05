@@ -18,25 +18,17 @@ export const bachelorGraduation: IFrame[] = [
       {
         content: "工作",
         onClick: {
-          luck: 20,
+          status: "byd-end",
         },
       },
       {
         content: "出国深造",
-        onClick: {
-          luck: 20,
-        },
+        onClick: {},
       },
       {
-        content: "国内读研",
+        content: "国内深造",
         onClick: {
-          luck: 20,
-        },
-      },
-      {
-        content: "硕博连读",
-        onClick: {
-          luck: 20,
+          status: "domestic-learning",
         },
       },
     ],

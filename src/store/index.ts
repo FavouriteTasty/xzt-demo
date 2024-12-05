@@ -17,7 +17,13 @@ export interface UIModel {
     | "group-start"
     | "group-end"
     | "bachelor-paper"
-    | "bachelor-graduation";
+    | "bachelor-graduation"
+    | "domestic-learning"
+    // ends
+    | "byd-end"
+    | "school-end"
+    | "klm-end";
+
   animating: boolean;
 }
 

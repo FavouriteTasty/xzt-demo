@@ -12,6 +12,10 @@ import { GroupEnd } from "./pages/group-end";
 import { BachelorPaper } from "./pages/bachelor-paper";
 import { FDUEND } from "./ends/fdu-end";
 import { BachelorGraduation } from "./pages/bachelor-graduation";
+import { BYDEnd } from "./ends/byd-end";
+import { SchoolEnd } from "./ends/school-end";
+import { DomesticLearning } from "./pages/domestic-learning";
+import { KLMEnd } from "./ends/klm-end";
 
 const App: FC = () => {
   const status = $UI.use((state) => state.status);
@@ -41,9 +45,21 @@ const App: FC = () => {
         {status === "bachelor-graduation" && AIDepend < 60 && (
           <BachelorGraduation key="bachelor-graduation" exit={{ opacity: 0 }} />
         )}
+        {status === "domestic-learning" && (
+          <DomesticLearning key="domestic-learning" exit={{ opacity: 0 }} />
+        )}
 
         {/* ends */}
-        {status === "bachelor-graduation" && AIDepend >= 60 && <FDUEND />}
+        {status === "bachelor-graduation" && AIDepend >= 60 && (
+          <FDUEND key="fdu-end" exit={{ opacity: 0 }} />
+        )}
+        {status === "byd-end" && (
+          <BYDEnd key="byd-lend" exit={{ opacity: 0 }} />
+        )}
+        {status === "school-end" && (
+          <SchoolEnd key="school-end" exit={{ opacity: 0 }} />
+        )}
+        {status === "klm-end" && <KLMEnd key="klm-end" exit={{ opacity: 0 }} />}
       </AnimatePresence>
     </MainBorder>
   );
