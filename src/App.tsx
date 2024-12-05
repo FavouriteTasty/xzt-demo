@@ -16,6 +16,12 @@ import { BYDEnd } from "./ends/byd-end";
 import { SchoolEnd } from "./ends/school-end";
 import { DomesticLearning } from "./pages/domestic-learning";
 import { KLMEnd } from "./ends/klm-end";
+import { ZBMKEnd } from "./ends/zbmk-end";
+import { AbroadLearning } from "./pages/abroad-learning";
+import { LXLEnd } from "./ends/lxl-end";
+import { GLEnd } from "./ends/gl-end";
+import { DCEnd } from "./ends/dc-end";
+import { WWTEnd } from "./ends/wwt-end";
 
 const App: FC = () => {
   const status = $UI.use((state) => state.status);
@@ -48,6 +54,9 @@ const App: FC = () => {
         {status === "domestic-learning" && (
           <DomesticLearning key="domestic-learning" exit={{ opacity: 0 }} />
         )}
+        {status === "abroad-learning" && (
+          <AbroadLearning key="abroad-learning" exit={{ opacity: 0 }} />
+        )}
 
         {/* ends */}
         {status === "bachelor-graduation" && AIDepend >= 60 && (
@@ -60,6 +69,13 @@ const App: FC = () => {
           <SchoolEnd key="school-end" exit={{ opacity: 0 }} />
         )}
         {status === "klm-end" && <KLMEnd key="klm-end" exit={{ opacity: 0 }} />}
+        {status === "zbmk-end" && (
+          <ZBMKEnd key="zbmk-end" exit={{ opacity: 0 }} />
+        )}
+        {status === "lxl-end" && <LXLEnd key="lxl-end" exit={{ opacity: 0 }} />}
+        {status === "gl-end" && <GLEnd key="gl-end" exit={{ opacity: 0 }} />}
+        {status === "dc-end" && <DCEnd key="dc-end" exit={{ opacity: 0 }} />}
+        {status === "wwt-end" && <WWTEnd key="wwt-end" exit={{ opacity: 0 }} />}
       </AnimatePresence>
     </MainBorder>
   );

@@ -15,7 +15,7 @@ export const End: FC<EndProps> = (props) => {
 
   return (
     <motion.div className="h-full w-full" {...rest}>
-      <Display imageSrc={imageSrc} noGrayscale noStatusBar>
+      <Display imageSrc={imageSrc} noStatusBar>
         <div className="w-full h-full flex items-center justify-center">
           <div className="px-2 text-2xl">
             <div className="text-3xl">{title}</div>

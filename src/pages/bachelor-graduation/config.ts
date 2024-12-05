@@ -23,7 +23,9 @@ export const bachelorGraduation: IFrame[] = [
       },
       {
         content: "出国深造",
-        onClick: {},
+        onClick: {
+          status: "abroad-learning",
+        },
       },
       {
         content: "国内深造",

@@ -19,10 +19,16 @@ export interface UIModel {
     | "bachelor-paper"
     | "bachelor-graduation"
     | "domestic-learning"
+    | "abroad-learning"
     // ends
     | "byd-end"
     | "school-end"
-    | "klm-end";
+    | "klm-end"
+    | "zbmk-end"
+    | "lxl-end"
+    | "dc-end"
+    | "gl-end"
+    | "wwt-end";
 
   animating: boolean;
 }
