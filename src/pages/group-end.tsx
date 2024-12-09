@@ -21,7 +21,7 @@ export const GroupEnd: FC<GroupEndProps> = (props) => {
               <Button
                 onClick={() => {
                   $UI.update("-> ", (draft) => {
-                    draft.status = "bachelor-paper";
+                    draft.status = "in-class";
                   });
                 }}
               >

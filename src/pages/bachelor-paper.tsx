@@ -38,7 +38,7 @@ export const BachelorPaper: FC<BachelorPaperProps> = (props) => {
                   });
                 }}
               >
-                AI 帮我润色降重
+                用 Elicit 查找最新的学术论文，AI 帮我润色降重！
               </Button>
               <Button
                 onClick={() => {

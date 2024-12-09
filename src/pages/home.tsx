@@ -13,7 +13,7 @@ export const Home: FC<HomeProps> = (props) => {
       {...rest}
     >
       <div className="flex items-center justify-center flex-col gap-8 p-6">
-        <div className="text-3xl">重生之速通《我是 AI 研究员》</div>
+        <div className="text-3xl">我重生了！AI时代，算法当家？</div>
         <Button
           onClick={() => {
             $UI.update("-> config", (draft) => {

@@ -22,6 +22,9 @@ import { LXLEnd } from "./ends/lxl-end";
 import { GLEnd } from "./ends/gl-end";
 import { DCEnd } from "./ends/dc-end";
 import { WWTEnd } from "./ends/wwt-end";
+import { InClass } from "./pages/in-class";
+import { TedSpeech } from "./pages/ted-speech";
+import { BioLab } from "./pages/bio-lab";
 
 const App: FC = () => {
   const status = $UI.use((state) => state.status);
@@ -45,6 +48,13 @@ const App: FC = () => {
         {status === "group-end" && (
           <GroupEnd key="group-end" exit={{ opacity: 0 }} />
         )}
+        {status === "in-class" && (
+          <InClass key="in-class" exit={{ opacity: 0 }} />
+        )}
+        {status === "ted-speech" && (
+          <TedSpeech key="ted-speech" exit={{ opacity: 0 }} />
+        )}
+        {status === "bio-lab" && <BioLab key="bio-lab" exit={{ opacity: 0 }} />}
         {status === "bachelor-paper" && (
           <BachelorPaper key="bachelor-paper" exit={{ opacity: 0 }} />
         )}
